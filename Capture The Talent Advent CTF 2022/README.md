@@ -8,7 +8,7 @@ Writeup for CTF: [Capture The Talent - Advent Challenger CTF 2022](http://advent
    - [ ] [Bah! Humbug!](<link_to_writeup>)
    
 - Steganography
-   - [ ] [Quick Response? Execute!](/Quick%20Response%3F%20Execute!/qr.md)
+   - [ ] [Quick Response? Execute!](/Capture%20The%20Talent%20Advent%20CTF%202022/Steg/Quick%20Response%3F%20Execute!/qr.md)
      
 - WTF
    - [ ] [Beep Boop Beep](<link_to_writeup>)
