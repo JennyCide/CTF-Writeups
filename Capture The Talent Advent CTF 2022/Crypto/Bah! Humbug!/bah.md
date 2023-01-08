@@ -22,13 +22,13 @@ Cyberchef recipe
 
 That gives us the output;
 
-``
+```
 n=92922060817666882978708891128958521752712382290788589835325087611305019738841
 
 e=65537
 
 c=25642457771502167415081880736441043512697808979332535239809777970214600481645
-``
+```
 
 The structure looks familiar.
 
@@ -41,7 +41,7 @@ Tried a few sites and then found a site I've used in previous CTFs
 
 Installed that and run it using
 
-``
+```
 
 python3 RsaCtfTool.py -n
 92922060817666882978708891128958521752712382290788589835325087611305019738841
@@ -50,7 +50,7 @@ python3 RsaCtfTool.py -n
 cipher
 25642457771502167415081880736441043512697808979332535239809777970214600481645
 
-``
+```
 
 That decrypted using fermat method
 
@@ -93,24 +93,24 @@ challenge and that rule are made by the same awesome individual but it
 runed out to be a heck of a lot more simple (although took me approx.
 100 attempts, each time aborting when I saw how long it would take!)
 
-In the end I used;
+In the end (ie: after a day or two of trying various things) I used;
 
-``
+```
 
 hashcat -m 13600 -a 0 -r rules/duplicateletters.rule cttctfchall1
 /usr/share/wordlists/rockyou.txt
 
-``
+```
 
 The duplicateletters.rule just contains;
 
-``
+```
 
 :
 
 q
 
-``
+```
 
 (the rule just tries every word in the dictionary supplied -- rockyou of
 course -- but doubles each letter)
@@ -123,20 +123,20 @@ the password lets you open the zipfile to access Deckthehalls.jpg
 
 run strings on the file
 
-``
+```
 
 strings Deckthehalls.jpg
 
-``
+```
 
 to give you 
 
-``
+```
 
 Ssh, it\'s a secret!\
 Vm0wd2QyUXlWa2hWV0doVVYwZDRWRll3WkZOVU1WcHpXa2M1VjJKSGVIbFhhMXBQWVZVeFYxTnNXbFpOYmtKVVZtMTRTMk15VGtsaVJtUnBVbXR3U1ZkV1pEUlpWMDE0V2toR1UySklRazlWYWtGM1pVWmtWMWRzV214U2JIQjVWR3hhYTFsV1NuUmhSemxWVm14d2VsUlVSbXRXTVdSelYyMTRVMDFFUlRCV1ZFa3hVakZaZVZOcmFGWmlSa3BXVm10V1MxUkdjRmRYYlVacVRWWmFlVmRyV205aFZscHpZMFpvVjFKRldtaFdha1pXWlZaT2NtSkdTbWxXUjNob1ZtMTBWazFXU2tkV1dHaFlZbFZhVlZWcVJtRlRWbkJHVjJ4a1ZXSkdiRFJWTW5SdlZqRkplbUZIYUZwaGEzQk1WV3BHVDFkWFRrZFRiV3hUWWtoQ1dWWXhaRFJpTWtsNVVtdGthbEpYVWxsWmJGWmhWa1pzY2xwR1RteFdiRVkwVmpKME1GWlhTa2RqUkVaV1ZqTlNlbFl3V2xwbGJGWjBZVVprVjFKV2NEWldiWEJIVlRKT2MyTkZaR2hTTW5oWVZtMDFRMWRzV25STlZFSlhUVlV4TkZaWGRHdGhWa3BIWTBaU1dtSllUWGhXTVZwWFkxWkdkVnBHVGs1V2JrSktWa1phVTFFeVJrZFhia3BwVWtad1lWWnNaRk5UUmxsM1YyeHdiR0pHV2pGV01uaDNZVWRGZWxGcmJGZGhhMHBvVmtSS1RtVkhUa1phUjJoVFRXMW9kbGRzWkRSWlYxSnpWMjVPV2sweWFITlpXSEJIVjBaVmVXUkhkR2hpUlhCWVZqSjRWMWRzV2taalJsSlhWbFp3YUZwRlpGTlRSa3B5VGxaa2FWTkZTa3RXYTFwaFlqRlJlVkpyWkZoaWF6VnhWVzB4YjFsV2JIUk9WVTVVVW14d2VGVldhRzlXTURGeVRsVndWazFxUmtoV1ZFWkxWMVpHYzFWc2FHaE5WWEJOVmxod1IxTXlVa2RUYmtwaFVqQmFWRlJYTlc5a2JGcEhWMjA1VWsxRVFqUldNalZMVjBkS1dWVnJPVlppVkVaVVdsWmFVMVl4WkhSa1IyaFRWa1ZKTVZkV1ZtdFNNV3hYVjFod1ZtSlhhR0ZVVlZwM1YwWnJlRmRyWkZkV2EzQjZWbGN4YzFVeVNuSlNhazVYVFZaS1JGbHFSazVsUmxweldrWmthVkpzY0ZCV1YzUnJaV3M1VWxCVU1EMD0=
 
-``
+```
 
 run that through cyberchef base64decode x10 then rot4
 
